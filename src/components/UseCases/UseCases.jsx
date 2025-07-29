@@ -8,7 +8,7 @@ const useCases = [
     heading: "Bring Characters to Life",
     paragraph:
       "With Dzine (formerly Stylar AI)'s diverse art styles and AI-assisted tools, designers can quickly create and customize characters for animations and games, including the conversion of 2D sketches into dynamic 3D characters.",
-    image: "public/images/character-design.png", 
+    image: "/images/character-design.png", 
   },
   {
     id: "print",
@@ -16,7 +16,7 @@ const useCases = [
     heading: "Create Unique Print Designs",
     paragraph:
       "Dzine (formerly Stylar AI) streamlines print-on-demand businesses by providing high-quality image editing tools and automated features for designing patterns on a variety of products, alongside simplified background creation and element addition for enhanced product visuals.",
-    image: "public/images/print-on-demand.png", 
+    image: "/images/print-on-demand.png", 
   },
   {
     id: "product", 
@@ -24,7 +24,7 @@ const useCases = [
     heading: "Enhance Images for Selling",
     paragraph:
       "Dzine (formerly Stylar AI) elevates product photography with its flexible layer system and powerful tools like auto-selection and generative fill. It enables the creation of striking images through AI, effortlessly turning basic photos into captivating graphics.",
-    image: "public/images/product-photography.png",
+    image: "/images/product-photography.png",
   },
   {
     id: "game",
@@ -32,7 +32,7 @@ const useCases = [
     heading: "Speed Up Game Creation",
     paragraph:
     "Dzine (formerly Stylar AI) accelerates the game design process by offering diverse, exquisite styles, coupled with strong image generation and versatile editing capabilities. It effortlessly converts ideas or sketches into complete concept designs and game assets with high-quality visuals.",
-    image: "public/images/game-design.png",
+    image: "/images/game-design.png",
   },
   {
     id: "interior",
@@ -40,7 +40,7 @@ const useCases = [
     heading: "Visualize Design Concepts",
     paragraph:
     "Dzine (formerly Stylar AI) aids interior designers with image editing tools and a style library for quick design visualization, facilitating client presentations and project planning. It enables effortless generation of multiple decoration styles for empty rooms, aligning with client preferences efficiently.",
-    image: "public/images/room-design.png",
+    image: "/images/room-design.png",
   },
   {
     id: "marketing",
@@ -48,7 +48,7 @@ const useCases = [
     heading: "Boost Campaigns with Creativity",
     paragraph:
       "Dzine (formerly Stylar AI) assists marketers in creating captivating marketing assets through image editing tools and a style library. It enables easy image enhancement, graphic creation, and logo transformation into creative scenes, boosting advertising appeal and impact.",
-    image: "public/images/logo-design.png",
+    image: "/images/logo-design.png",
   },
 ];
 
