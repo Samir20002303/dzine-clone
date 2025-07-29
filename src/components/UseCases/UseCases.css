@@ -1,0 +1,179 @@
+.usecases {
+  background-color: #000;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.usecases-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.usecases-subtitle {
+  font-size: 1.25rem;
+  color: #aaa;
+  margin-bottom: 3rem;
+}
+
+.tabs-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.tabs {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.tab-input {
+  display: none;
+}
+
+.tab-labels {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 1.5rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tab-labels::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-label {
+  cursor: pointer;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  color: #999;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-label:hover {
+  color: #fff;
+}
+
+#tab-character:checked ~ .tab-labels .tab-label[for="tab-character"],
+#tab-print:checked ~ .tab-labels .tab-label[for="tab-print"],
+#tab-product:checked ~ .tab-labels .tab-label[for="tab-product"],
+#tab-game:checked ~ .tab-labels .tab-label[for="tab-game"],
+#tab-interior:checked ~ .tab-labels .tab-label[for="tab-interior"],
+#tab-marketing:checked ~ .tab-labels .tab-label[for="tab-marketing"] {
+  color: #fff;
+  border-color: #ffd400;
+}
+
+.tab-panels {
+  position: relative;
+  min-height: 400px;
+}
+
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.5s ease-out;
+}
+
+#tab-character:checked ~ .tab-panels #panel-character,
+#tab-print:checked ~ .tab-panels #panel-print,
+#tab-product:checked ~ .tab-panels #panel-product,
+#tab-game:checked ~ .tab-panels #panel-game,
+#tab-interior:checked ~ .tab-panels #panel-interior,
+#tab-marketing:checked ~ .tab-panels #panel-marketing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.text-content {
+  max-width: 600px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.text-content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.panel-image {
+  border-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .usecases {
+    padding: 6rem 1rem;
+  }
+
+  .usecases-title {
+    font-size: 3rem;
+  }
+
+  .tab-labels {
+    justify-content: center;
+  }
+
+  .tab-label {
+    padding: 0.5rem 1rem;
+  }
+
+  .panel-content {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  #panel-character .panel-content,
+  #panel-product .panel-content,
+  #panel-interior .panel-content {
+    flex-direction: row;
+  }
+
+  #panel-print .panel-content,
+  #panel-game .panel-content,
+  #panel-marketing .panel-content {
+    flex-direction: row-reverse;
+  }
+
+  .text-content {
+    text-align: left;
+  }
+
+  .panel-image {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,133 @@
+.features {
+  background-color: #0e0e0e;
+  position: relative;
+  text-align: center;
+  padding: 4rem 1rem;
+  z-index: 0;
+  color: #ffffff;
+}
+
+.features-content {
+  padding-top: 40px;
+  max-width: 72rem;
+  margin: 0 auto 60px auto;
+}
+
+.features-content h1 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.features-content p {
+  font-size: 1.125rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.features-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.feature-item.videoLeft,
+.feature-item:nth-child(even) {
+  flex-direction: row;
+}
+
+.feature-item.videoRight,
+.feature-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.feature-video {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.feature-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature-text-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+}
+
+.feature-text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.feature-text-content p {
+  font-size: 1.125rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.feature-button {
+  display: inline-block;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 1px white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.feature-button:hover {
+  background-color: #9b9b9b27;
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 15px;
+  }
+
+  .features-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .features-content p {
+    font-size: 1rem;
+  }
+
+  .feature-item {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .feature-video,
+  .feature-text-content {
+    max-width: 100%;
+    min-width: unset;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .feature-button {
+    width: auto;
+    margin: 0 auto;
+  }
+}

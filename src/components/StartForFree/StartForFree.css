@@ -1,0 +1,67 @@
+.call-to-action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem; 
+  padding: 4rem 1rem; 
+  background-color: #0e0e0e;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) { /* md:py-20 md:px-0 md:pt-32 md:pb-1 */
+  .call-to-action-section {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 8rem; /* md:pt-32 (128px) */
+    padding-bottom: 0.25rem; /* md:pb-1 (4px) */
+  }
+}
+
+.call-to-action-title {
+  font-size: 3rem; /* stl-h1 */
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 56rem; /* md:max-w-4xl (896px) */
+}
+
+@media (min-width: 768px) {
+  .call-to-action-title {
+    font-size: 3.75rem; /* Larger font for desktop if stl-h1 implies that */
+  }
+}
+
+
+.call-to-action-button {
+  /* stl-btn stl-btn-block md:stl-btn-wide stl-btn-primary */
+  background-color: #ffd400; /* Primary button yellow */
+  color: #001610; /* Dark text for contrast */
+  font-weight: 600; /* font-medium */
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  border-radius: 0.5rem; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; 
+  max-width: 300px; 
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) { /* md:stl-btn-wide */
+  .call-to-action-button {
+    max-width: 250px; /* Adjust for wide button on desktop */
+    font-size: 1.25rem; /* md:text-xl */
+    padding: 1.25rem 2.5rem;
+  }
+}
+
+.call-to-action-button:hover {
+  background-color: #ffea80; /* Lighter yellow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.call-to-action-button:active {
+  transform: translateY(0);
+}
