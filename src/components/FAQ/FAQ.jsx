@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FAQ.css'; 
+import './FAQ.css';
 
 const faqData = [
   {
@@ -30,7 +30,7 @@ const faqData = [
   {
     id: 6,
     question: "How do i get involved with the Dzine (formely Stylar AI) community?",
-    answer: "Dive into  Dzine (formerly Stylar AI) community to discover a supportive and creative network on platforms like Discord, Instagram, Reddit, and YouTube. Share your work, get tips, and find new ideas. It's a place for joining creative contests and making stuff together. By joining, you play a role in guiding  Dzine (formerly Stylar AI)'s evolution, merging technology with artistry. Let's make cool things happen with our ideas, backed by friends from all over the world."
+    answer: "Dive into  Dzine (formerly Stylar AI) community to discover a supportive and creative network on platforms like Discord, Instagram, Reddit, and YouTube. Share your work, get tips, and find new ideas. It's a place for joining creative contests and making stuff together. By joining, you play a role in guiding  Dzine (formerly Stylar AI)'s evolution, merging technology with artistry. Let's make cool things happen with our ideas, backed by friends from all over the world."
   },
 ];
 
@@ -45,7 +45,6 @@ function FAQ() {
     <section className="faq-section">
       <div className="faq-container">
         <h1 className="faq-main-title">Frequently Asked Questions</h1>
-        
 
         <div className="faq-list">
           {faqData.map((item) => (
@@ -64,11 +63,12 @@ function FAQ() {
               </button>
               <div
                 className={`faq-answer-container ${openQuestionId === item.id ? 'open' : ''}`}
-                style={{
-                  maxHeight: openQuestionId === item.id ? '200px' : '0',
-                  overflow: 'hidden',
-                  transition: 'max-height 0.4s ease-in-out'
-                }}
+                // REMOVE THE INLINE STYLE FOR MAX-HEIGHT HERE, IT'S NOW CONTROLLED BY CSS
+                // style={{
+                //   maxHeight: openQuestionId === item.id ? '200px' : '0',
+                //   overflow: 'hidden',
+                //   transition: 'max-height 0.4s ease-in-out'
+                // }}
               >
                 <p className="faq-answer">{item.answer}</p>
               </div>

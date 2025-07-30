@@ -22,7 +22,7 @@
 .faq-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .faq-item {
@@ -41,9 +41,9 @@
   width: 100%;
   background-color: #1e1e1e;
   color: #ffffff;
-  padding: 1.5rem 1.5rem; 
+  padding: 1.5rem 1.5rem;
   text-align: left;
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   font-weight: 600;
   border: none;
   cursor: pointer;
@@ -90,13 +90,17 @@
 }
 
 .faq-answer-container {
-  max-height: 0;
+  max-height: 0; /* Starts at 0 height */
   overflow: hidden;
   transition: max-height 0.4s ease-in-out;
 }
 
 .faq-answer-container.open {
-  max-height: 200px;
+  /* Use a generously large max-height value here.
+     This ensures even very long answers can expand fully.
+     Remove min-height as it conflicts with the max-height transition. */
+  max-height: 1000px; /* Or even higher, like 1500px, 2000px if content can be very long */
+  min-height: auto; /* Ensure no minimum height interferes */
 }
 
 .faq-answer {
@@ -140,4 +144,3 @@
     height: 18px;
   }
 }
-

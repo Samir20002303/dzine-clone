@@ -84,8 +84,8 @@ const UseCases = () => {
                 htmlFor={`tab-${useCase.id}`}
                 className="tab-label"
                 role="tab"
-                aria-selected="false" // C gérer l'état
-                tabIndex="0" // Rend les labels focusables
+                aria-selected="false" 
+                tabIndex="0" 
               >
                 {useCase.title}
               </label>
